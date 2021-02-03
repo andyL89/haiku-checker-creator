@@ -20,6 +20,17 @@ export default class Haiku {
   constructor(sentenceOne) {
     this.sentenceOne = sentenceOne;
   }
+
+  syllableChecker(sentenceOne) { // An old silent pond
+    // const vowels = ["a", "e", "i", "o", "u", "y"];
+    let syllableCounter = 0; 
+    if (syllableCounter === 5) {
+      return true;
+    } else {
+      return false;
+    }
+  
+  }
 }
 
 // const sentence = new Haiku("An old silent pond");
