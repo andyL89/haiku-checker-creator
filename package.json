@@ -1,5 +1,5 @@
 {
-  "name": "template",
+  "name": "haiku",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,8 +10,7 @@
     "test": "jest --coverage"
   },
   "jest": {
-    "collectCoverage": true,
-    "coverageReporters": ["html"]
+    "collectCoverage": true
   },
   "keywords": [],
   "author": "",
