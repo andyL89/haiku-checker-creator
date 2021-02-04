@@ -17,19 +17,29 @@ Splash! Silence again.
 
 */
 export default class Haiku {
-  constructor(sentenceOne) {
-    this.sentenceOne = sentenceOne;
+  constructor(sentence) {
+    this.sentence = sentence;
   }
 
-  syllableChecker(sentenceOne) { // An old silent pond
-    // const vowels = ["a", "e", "i", "o", "u", "y"];
+  syllableChecker(sentence, syllableNumberRequirement) { 
+    const vowels = ["a", "e", "i", "o", "u", "y"];
+    // Need to LOOP through sentence to look for vowels groupings/syllables
+    // If we find a vowel, then we can increment syllableCounter
+    // vowels.includes() (For Example, syllableCounter += 1)
+    // sentence.charAt(i);
     let syllableCounter = 0; 
-    if (syllableCounter === 5) {
+    for(let i = 0; i < sentence.length; i++) {
+      let currentLetter = sentence.charAt(i);
+      if (vowels.includes(currentLetter)) { // An old silent pond
+        syllableCounter += 1;
+      }
+    }
+    
+    if (syllableCounter === syllableNumberRequirement) {
       return true;
     } else {
       return false;
     }
-  
   }
 }
 
