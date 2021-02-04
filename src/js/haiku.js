@@ -31,7 +31,12 @@ export default class Haiku {
     for(let i = 0; i < sentence.length; i++) {
       let currentLetter = sentence.charAt(i);
       if (vowels.includes(currentLetter)) { // An old silent pond
-        syllableCounter += 1;
+        if(i !== sentence.length) {
+          let nextLetter = sentence.charAt(i + 1);
+          if(!vowels.includes(nextLetter)) {
+            syllableCounter += 1;
+          }
+        }
       }
     }
     
