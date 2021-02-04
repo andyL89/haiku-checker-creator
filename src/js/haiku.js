@@ -7,9 +7,14 @@ Each group of adjacent vowels (a, e, i, o, u, y) counts as one syllable.
 Example: Dandy
 
 Rules:
--1: Consonants + e
-+1: Length <= 4
 +1: -ing, -ed, -y, -ly, -ey, -tle, -dle
+
+Edge Cases:
+- Fire
+- Store
+- Liar
+- Lion
+- Lying
 
 An old silent pond
 A frog jumps into the pond—
@@ -48,8 +53,4 @@ export default class Haiku {
   }
 }
 
-// const sentence = new Haiku("An old silent pond");
-// sentenceOne  = {
-//   sentence: "An old silent pond"
-// }
-// sentence.sentence
+

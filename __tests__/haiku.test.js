@@ -17,4 +17,10 @@ describe ('Haiku', () => {
     expect(haiku.syllableChecker("an old silent pond", 7)).toEqual(false);
   });
 
+
+  test('Testing random words', () => {
+    const haiku = new Haiku("An old silent pond");
+    expect(haiku.syllableChecker("hulu", 2)).toEqual(true);
+  });
+
 });
